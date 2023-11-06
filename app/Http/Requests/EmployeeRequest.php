@@ -23,8 +23,8 @@ class EmployeeRequest extends FormRequest
     {
         return [
             
-            'empFname' => "required|alpha:ascii",
-            'empLname' => "required|alpha:ascii",
+            'empFname' => "required|string",
+            'empLname' => "required|string",
             'gender' => "required|in:Male,Female",
             'birthday' => "required|date",
             'age' => "required|int",
@@ -39,8 +39,8 @@ class EmployeeRequest extends FormRequest
         
         return [
             'empFname.required' => 'First name field is required.',
-            'empFname.alpha' => 'First name must be alphabet characters only.',
-            'empLname.alpha' => 'Last name must be alphabet characters only.',
+            'empFname.string' => 'First name must be alphabet characters only.',
+            'empLname.string' => 'Last name must be alphabet characters only.',
             'empLname.required' => 'Last Name field is required.',
             'age.int' => 'Select birthday to identify the right age.',
             'age.required' => 'Select birthday to identify the right age.',
